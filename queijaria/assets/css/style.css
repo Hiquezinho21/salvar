@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    text-align: center;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+input:focus {
+    border-color: #6c63ff;
+    outline: none;
+}
+
+#telefone {
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #5a52e0;
+}
+
+.error {
+    color: #ff4757;
+    margin-bottom: 20px;
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+.login-link {
+    margin-top: 20px;
+    color: #555;
+}
+
+.login-link a {
+    color: #6c63ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Indicador de força da senha */
+.password-strength {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+    align-items: center;
+}
+
+.strength-bar {
+    height: 4px;
+    flex-grow: 1;
+    background: #e0e0e0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.strength-text {
+    font-size: 12px;
+    margin-left: 8px;
+    color: #666;
+}
+
+.password-weak .strength-bar:nth-child(1) {
+    background: #ff4757;
+}
+.password-medium .strength-bar:nth-child(1),
+.password-medium .strength-bar:nth-child(2) {
+    background: #ffa502;
+}
+.password-strong .strength-bar {
+    background: #2ed573;
+}
+
+.password-weak .strength-text {
+    color: #ff4757;
+}
+.password-medium .strength-text {
+    color: #ffa502;
+}
+.password-strong .strength-text {
+    color: #2ed573;
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 30px;
+        margin: 0 15px;
+    }
+    
+    .password-strength {
+        gap: 3px;
+    }
+    
+    .strength-bar {
+        height: 6px;
+    }
+}
